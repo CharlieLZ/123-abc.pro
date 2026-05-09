@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>动物数字字母小游戏 - 适合3岁宝宝的HTML学习游戏</title>
+  <meta name="description" content="一个适合3岁宝宝玩的动物数字字母小游戏，用可爱的动物、数字和英文字母帮助孩子进行启蒙学习。纯HTML单文件，可直接打开使用。" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#22c55e" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2322c55e'/%3E%3Ctext x='50' y='64' font-size='54' text-anchor='middle'%3E🐼%3C/text%3E%3C/svg%3E" />
+
+  <style>
+    :root {
+      --green: #22c55e;
+      --green-dark: #15803d;
+      --blue: #38bdf8;
+      --yellow: #facc15;
+      --orange: #fb923c;
+      --pink: #fb7185;
+      --purple: #a78bfa;
+      --red: #ef4444;
+      --ink: #123047;
+      --muted: #64748b;
+      --card: #ffffff;
+      --line: rgba(15, 23, 42, 0.08);
+      --shadow: 0 18px 50px rgba(15, 90, 60, 0.15);
+      --radius: 30px;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 8%, rgba(250, 204, 21, .35), transparent 25%),
+        radial-gradient(circle at 92% 12%, rgba(56, 189, 248, .28), transparent 26%),
+        radial-gradient(circle at 50% 96%, rgba(34, 197, 94, .20), transparent 36%),
+        linear-gradient(180deg, #ecfeff 0%, #f7fee7 45%, #fff7ed 100%);
+      overflow-x: hidden;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .app {
+      width: min(1080px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 22px 0 32px;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 1000;
+      font-size: clamp(22px, 4vw, 34px);
+      letter-spacing: -0.04em;
+      color: var(--green-dark);
+    }
+
+    .logo {
+      width: 58px;
+      height: 58px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #dcfce7, #ffffff);
+      box-shadow: var(--shadow);
+      font-size: 36px;
+      border: 2px solid rgba(34, 197, 94, .18);
+    }
+
+    .pill {
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 1000;
+      background: #fff;
+      border: 2px solid rgba(34,197,94,.16);
+      color: var(--green-dark);
+      box-shadow: 0 8px 18px rgba(15, 90, 60, .08);
+      white-space: nowrap;
+    }
+
+    .hero {
+      position: relative;
+      border-radius: 36px;
+      background:
+        radial-gradient(circle at 8% 8%, rgba(255,255,255,.8), transparent 18%),
+        linear-gradient(135deg, rgba(255,255,255,.94), rgba(255,255,255,.78));
+      border: 2px solid rgba(255,255,255,.8);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      padding: clamp(18px, 4vw, 34px);
+      margin-bottom: 18px;
+    }
+
+    .cloud {
+      position: absolute;
+      background: rgba(255,255,255,.72);
+      border-radius: 999px;
+      pointer-events: none;
+    }
+
+    .cloud::before,
+    .cloud::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      background: rgba(255,255,255,.86);
+    }
+
+    .c1 {
+      width: 120px;
+      height: 34px;
+      left: -16px;
+      top: 40px;
+    }
+
+    .c1::before {
+      width: 54px;
+      height: 54px;
+      left: 18px;
+      bottom: 10px;
+    }
+
+    .c1::after {
+      width: 72px;
+      height: 72px;
+      left: 56px;
+      bottom: 0;
+    }
+
+    .c2 {
+      width: 150px;
+      height: 38px;
+      right: -28px;
+      top: 64px;
+    }
+
+    .c2::before {
+      width: 72px;
+      height: 72px;
+      left: 20px;
+      bottom: 8px;
+    }
+
+    .c2::after {
+      width: 64px;
+      height: 64px;
+      left: 88px;
+      bottom: 10px;
+    }
+
+    .intro {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 18px;
+    }
+
+    .intro h1 {
+      margin: 0 0 8px;
+      font-size: clamp(34px, 7vw, 64px);
+      line-height: 1.02;
+      letter-spacing: -0.07em;
+      color: var(--green-dark);
+      font-weight: 1000;
+    }
+
+    .intro h1 span {
+      color: var(--orange);
+    }
+
+    .intro p {
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(17px, 3vw, 22px);
+      font-weight: 800;
+    }
+
+    .mode-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 880px;
+      margin: 22px auto 0;
+    }
+
+    .mode-btn {
+      border: 0;
+      cursor: pointer;
+      min-height: 92px;
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: 0 10px 26px rgba(15, 90, 60, .10);
+      color: var(--ink);
+      font-size: clamp(17px, 2.8vw, 23px);
+      font-weight: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: .2s;
+      border: 3px solid transparent;
+    }
+
+    .mode-btn span {
+      font-size: 34px;
+    }
+
+    .mode-btn.active,
+    .mode-btn:hover {
+      transform: translateY(-2px);
+      border-color: var(--green);
+      background: #f0fdf4;
+    }
+
+    .main-card {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .question-card,
+    .choices-card {
+      background: rgba(255,255,255,.92);
+      border: 2px solid rgba(255,255,255,.8);
+      border-radius: 34px;
+      box-shadow: var(--shadow);
+      padding: clamp(18px, 4vw, 28px);
+    }
+
+    .question-card {
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .score-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .score-item {
+      flex: 1;
+      background: #f8fafc;
+      border-radius: 18px;
+      padding: 10px 12px;
+      font-weight: 1000;
+      color: #475569;
+      border: 1px solid var(--line);
+    }
+
+    .score-item strong {
+      color: var(--green-dark);
+      font-size: 22px;
+    }
+
+    .big-animal {
+      width: min(310px, 70vw);
+      height: min(310px, 70vw);
+      margin: 0 auto 16px;
+      border-radius: 42px;
+      background:
+        radial-gradient(circle at 30% 26%, rgba(255,255,255,.7), transparent 22%),
+        linear-gradient(135deg, #fef3c7, #d9f99d);
+      display: grid;
+      place-items: center;
+      font-size: clamp(120px, 26vw, 210px);
+      box-shadow: inset 0 0 0 5px rgba(255,255,255,.65), 0 18px 40px rgba(15, 90, 60, .10);
+      user-select: none;
+    }
+
+    .question-text {
+      margin: 0 auto 14px;
+      font-size: clamp(24px, 5vw, 42px);
+      line-height: 1.12;
+      font-weight: 1000;
+      letter-spacing: -0.04em;
+    }
+
+    .hint-text {
+      color: var(--muted);
+      font-size: clamp(16px, 2.6vw, 21px);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .sound-btn,
+    .next-btn,
+    .reset-btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 13px 20px;
+      cursor: pointer;
+      font-weight: 1000;
+      font-size: 18px;
+      color: white;
+      box-shadow: 0 12px 24px rgba(34, 197, 94, .23);
+      transition: .2s;
+    }
+
+    .sound-btn {
+      background: linear-gradient(135deg, var(--blue), #2563eb);
+    }
+
+    .next-btn {
+      background: linear-gradient(135deg, var(--green), #16a34a);
+    }
+
+    .reset-btn {
+      background: linear-gradient(135deg, #94a3b8, #64748b);
+    }
+
+    .sound-btn:hover,
+    .next-btn:hover,
+    .reset-btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.03);
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .choices-title {
+      margin: 0 0 14px;
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 1000;
+      color: var(--ink);
+      letter-spacing: -0.04em;
+      text-align: center;
+    }
+
+    .choices-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .choice {
+      border: 0;
+      cursor: pointer;
+      min-height: 118px;
+      border-radius: 28px;
+      background: #fff;
+      border: 4px solid rgba(15,23,42,.06);
+      box-shadow: 0 10px 24px rgba(15, 90, 60, .08);
+      color: var(--ink);
+      font-size: clamp(30px, 7vw, 58px);
+      font-weight: 1000;
+      display: grid;
+      place-items: center;
+      transition: .18s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .choice::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 20%, rgba(255,255,255,.7), transparent 30%);
+      pointer-events: none;
+    }
+
+    .choice:hover {
+      transform: translateY(-3px) scale(1.01);
+    }
+
+    .choice.correct {
+      border-color: var(--green);
+      background: #dcfce7;
+      animation: bounce .45s ease;
+    }
+
+    .choice.wrong {
+      border-color: var(--red);
+      background: #fee2e2;
+      animation: shake .35s ease;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: scale(1); }
+      45% { transform: scale(1.06); }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-6px); }
+      75% { transform: translateX(6px); }
+    }
+
+    .feedback {
+      min-height: 58px;
+      margin-top: 16px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-size: clamp(20px, 4vw, 31px);
+      font-weight: 1000;
+      padding: 10px;
+      color: var(--green-dark);
+      background: #f0fdf4;
+      border: 2px dashed rgba(34,197,94,.24);
+    }
+
+    .learning-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .mini-card {
+      background: rgba(255,255,255,.92);
+      border: 2px solid rgba(255,255,255,.8);
+      border-radius: 26px;
+      box-shadow: 0 10px 26px rgba(15, 90, 60, .09);
+      padding: 16px;
+      text-align: center;
+    }
+
+    .mini-card .icon {
+      font-size: 38px;
+      margin-bottom: 4px;
+    }
+
+    .mini-card h3 {
+      margin: 0 0 4px;
+      font-size: 19px;
+      line-height: 1.18;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .parent-note {
+      margin-top: 18px;
+      background: rgba(255,255,255,.76);
+      border: 2px solid rgba(255,255,255,.86);
+      box-shadow: 0 8px 24px rgba(15, 90, 60, .06);
+      border-radius: 24px;
+      padding: 16px 18px;
+      color: #475569;
+      font-weight: 700;
+    }
+
+    .parent-note strong {
+      color: var(--green-dark);
+    }
+
+    .floating {
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%) translateY(18px);
+      opacity: 0;
+      pointer-events: none;
+      background: rgba(18, 48, 71, .94);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 20px;
+      font-weight: 1000;
+      z-index: 99;
+      transition: .25s;
+      white-space: nowrap;
+    }
+
+    .floating.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .confetti {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 80;
+      overflow: hidden;
+    }
+
+    .confetti span {
+      position: absolute;
+      top: -24px;
+      font-size: 26px;
+      animation: fall 1.4s ease-in forwards;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: .2;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .main-card {
+        grid-template-columns: 1fr;
+      }
+
+      .learning-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .mode-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mode-btn {
+        min-height: 76px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .pill {
+        width: 100%;
+        text-align: center;
+      }
+
+      .choices-grid {
+        gap: 10px;
+      }
+
+      .choice {
+        min-height: 94px;
+        border-radius: 22px;
+      }
+
+      .learning-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .score-row {
+        flex-direction: column;
+      }
+
+      .score-item {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="confetti" id="confetti"></div>
+
+  <div class="app">
+    <div class="top">
+      <div class="brand">
+        <div class="logo">🐼</div>
+        <div>动物 ABC 123 小游戏</div>
+      </div>
+      <div class="pill">适合 3 岁宝宝 · 点一点就能玩</div>
+    </div>
+
+    <section class="hero">
+      <span class="cloud c1"></span>
+      <span class="cloud c2"></span>
+
+      <div class="intro">
+        <h1>和小动物一起学 <span>数字</span> 和 <span>字母</span></h1>
+        <p>看动物，听提示，点答案。按钮大、颜色亮、题目短，适合亲子陪玩。</p>
+      </div>
+
+      <div class="mode-grid">
+        <button class="mode-btn active" type="button" data-mode="number">
+          <span>🔢</span> 学数字
+        </button>
+        <button class="mode-btn" type="button" data-mode="letter">
+          <span>🔤</span> 学字母
+        </button>
+        <button class="mode-btn" type="button" data-mode="animal">
+          <span>🐯</span> 认动物
+        </button>
+      </div>
+    </section>
+
+    <main class="main-card">
+      <section class="question-card">
+        <div class="score-row">
+          <div class="score-item">答对 <strong id="score">0</strong></div>
+          <div class="score-item">第 <strong id="round">1</strong> 题</div>
+        </div>
+
+        <div class="big-animal" id="animalFace" aria-label="动物图片">🐘</div>
+
+        <h2 class="question-text" id="questionText">大象带来了几个苹果？</h2>
+        <div class="hint-text" id="hintText">请选择正确的数字</div>
+
+        <div class="actions">
+          <button class="sound-btn" type="button" onclick="speakQuestion()">🔊 听一听</button>
+          <button class="next-btn" type="button" onclick="newQuestion()">下一题 ➜</button>
+          <button class="reset-btn" type="button" onclick="resetGame()">重新开始</button>
+        </div>
+      </section>
+
+      <section class="choices-card">
+        <h2 class="choices-title">请选择答案</h2>
+        <div class="choices-grid" id="choicesGrid"></div>
+        <div class="feedback" id="feedback">准备好了吗？点一个答案吧！</div>
+      </section>
+    </main>
+
+    <section class="learning-strip">
+      <div class="mini-card">
+        <div class="icon">👆</div>
+        <h3>大按钮</h3>
+        <p>适合小手点击，不容易误触。</p>
+      </div>
+      <div class="mini-card">
+        <div class="icon">🐶</div>
+        <h3>动物陪伴</h3>
+        <p>用熟悉动物降低学习压力。</p>
+      </div>
+      <div class="mini-card">
+        <div class="icon">🔊</div>
+        <h3>语音提示</h3>
+        <p>支持浏览器朗读题目。</p>
+      </div>
+      <div class="mini-card">
+        <div class="icon">🎉</div>
+        <h3>即时鼓励</h3>
+        <p>答对后有反馈和小彩花。</p>
+      </div>
+    </section>
+
+    <div class="parent-note">
+      <strong>家长提示：</strong>3 岁孩子不要追求速度和正确率，重点是“愿意点、愿意听、愿意说”。建议每次玩 5-8 分钟，让孩子跟着读数字、字母和动物名字。
+    </div>
+  </div>
+
+  <div class="floating" id="toast">太棒啦！</div>
+
+  <script>
+    const animals = [
+      { emoji: "🐘", zh: "大象", en: "Elephant", letter: "E" },
+      { emoji: "🐼", zh: "熊猫", en: "Panda", letter: "P" },
+      { emoji: "🦁", zh: "狮子", en: "Lion", letter: "L" },
+      { emoji: "🐯", zh: "老虎", en: "Tiger", letter: "T" },
+      { emoji: "🐵", zh: "猴子", en: "Monkey", letter: "M" },
+      { emoji: "🐰", zh: "兔子", en: "Rabbit", letter: "R" },
+      { emoji: "🦊", zh: "狐狸", en: "Fox", letter: "F" },
+      { emoji: "🐶", zh: "小狗", en: "Dog", letter: "D" },
+      { emoji: "🐱", zh: "小猫", en: "Cat", letter: "C" },
+      { emoji: "🐻", zh: "小熊", en: "Bear", letter: "B" }
+    ];
+
+    const animalObjects = ["🍎", "⭐", "🥕", "🟡", "🌸", "🍪"];
+
+    let mode = "number";
+    let answer = null;
+    let score = 0;
+    let round = 1;
+    let locked = false;
+    let currentSpeakText = "";
+
+    const modeButtons = document.querySelectorAll("[data-mode]");
+    const animalFace = document.getElementById("animalFace");
+    const questionText = document.getElementById("questionText");
+    const hintText = document.getElementById("hintText");
+    const choicesGrid = document.getElementById("choicesGrid");
+    const feedback = document.getElementById("feedback");
+    const scoreEl = document.getElementById("score");
+    const roundEl = document.getElementById("round");
+
+    modeButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        modeButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        mode = btn.dataset.mode;
+        resetGame();
+      });
+    });
+
+    function randomItem(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function shuffle(arr) {
+      return arr.sort(() => Math.random() - 0.5);
+    }
+
+    function makeChoices(correct, pool, count = 4) {
+      const values = [correct];
+      const filtered = pool.filter(x => x !== correct);
+      shuffle(filtered).slice(0, count - 1).forEach(x => values.push(x));
+      return shuffle(values);
+    }
+
+    function newQuestion() {
+      locked = false;
+      feedback.textContent = "准备好了吗？点一个答案吧！";
+      feedback.style.color = "#15803d";
+      feedback.style.background = "#f0fdf4";
+      feedback.style.borderColor = "rgba(34,197,94,.24)";
+
+      const animal = randomItem(animals);
+      animalFace.textContent = animal.emoji;
+
+      if (mode === "number") {
+        const count = Math.floor(Math.random() * 10) + 1;
+        answer = String(count);
+        const obj = randomItem(animalObjects);
+        const displayObjects = obj.repeat(Math.min(count, 10));
+        questionText.innerHTML = `${animal.zh} 带来了几个？<br><span style="font-size:.72em;">${displayObjects}</span>`;
+        hintText.textContent = "请选择正确的数字";
+        currentSpeakText = `${animal.zh} 带来了 ${count} 个。请选择数字 ${count}`;
+        renderChoices(makeChoices(String(count), ["1","2","3","4","5","6","7","8","9","10"]));
+      }
+
+      if (mode === "letter") {
+        answer = animal.letter;
+        questionText.textContent = `${animal.en} 是哪个字母开头？`;
+        hintText.textContent = `${animal.zh} 的英文是 ${animal.en}`;
+        currentSpeakText = `${animal.en}. ${animal.en} starts with letter ${answer}.`;
+        const letters = ["A","B","C","D","E","F","L","M","P","R","T","Z"];
+        renderChoices(makeChoices(answer, letters));
+      }
+
+      if (mode === "animal") {
+        answer = animal.zh;
+        questionText.textContent = `这是什么小动物？`;
+        hintText.textContent = "请选择正确的动物名字";
+        currentSpeakText = `这是什么小动物？这是${animal.zh}`;
+        const names = animals.map(a => a.zh);
+        renderChoices(makeChoices(answer, names));
+      }
+
+      roundEl.textContent = round;
+    }
+
+    function renderChoices(choices) {
+      choicesGrid.innerHTML = "";
+      choices.forEach(value => {
+        const btn = document.createElement("button");
+        btn.className = "choice";
+        btn.type = "button";
+        btn.textContent = value;
+        btn.setAttribute("aria-label", "答案 " + value);
+        btn.onclick = () => chooseAnswer(btn, value);
+        choicesGrid.appendChild(btn);
+      });
+    }
+
+    function chooseAnswer(btn, value) {
+      if (locked) return;
+      locked = true;
+
+      const all = document.querySelectorAll(".choice");
+      all.forEach(item => {
+        if (item.textContent === answer) {
+          item.classList.add("correct");
+        }
+      });
+
+      if (value === answer) {
+        score++;
+        scoreEl.textContent = score;
+        feedback.textContent = "答对啦！宝宝真棒 🎉";
+        feedback.style.color = "#15803d";
+        feedback.style.background = "#dcfce7";
+        feedback.style.borderColor = "rgba(34,197,94,.5)";
+        showToast("太棒啦！");
+        confetti();
+        speak("答对啦，宝宝真棒！");
+      } else {
+        btn.classList.add("wrong");
+        feedback.textContent = `再试试，正确答案是：${answer}`;
+        feedback.style.color = "#b91c1c";
+        feedback.style.background = "#fee2e2";
+        feedback.style.borderColor = "rgba(239,68,68,.4)";
+        showToast("没关系，再来一次！");
+        speak("没关系，再来一次！");
+      }
+
+      setTimeout(() => {
+        round++;
+        newQuestion();
+      }, value === answer ? 1300 : 1800);
+    }
+
+    function resetGame() {
+      score = 0;
+      round = 1;
+      scoreEl.textContent = score;
+      roundEl.textContent = round;
+      newQuestion();
+    }
+
+    function speakQuestion() {
+      speak(currentSpeakText);
+    }
+
+    function speak(text) {
+      if (!("speechSynthesis" in window)) {
+        showToast("当前浏览器不支持语音朗读");
+        return;
+      }
+
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = /[A-Za-z]/.test(text) && !/[\u4e00-\u9fa5]/.test(text) ? "en-US" : "zh-CN";
+      utter.rate = 0.82;
+      utter.pitch = 1.15;
+      window.speechSynthesis.speak(utter);
+    }
+
+    function showToast(text) {
+      const toast = document.getElementById("toast");
+      toast.textContent = text;
+      toast.classList.add("show");
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(() => toast.classList.remove("show"), 1400);
+    }
+
+    function confetti() {
+      const box = document.getElementById("confetti");
+      const icons = ["🎉", "⭐", "🌈", "🍬", "✨", "💚"];
+      box.innerHTML = "";
+
+      for (let i = 0; i < 24; i++) {
+        const span = document.createElement("span");
+        span.textContent = randomItem(icons);
+        span.style.left = Math.random() * 100 + "vw";
+        span.style.animationDelay = Math.random() * 0.25 + "s";
+        span.style.fontSize = (22 + Math.random() * 14) + "px";
+        box.appendChild(span);
+      }
+
+      setTimeout(() => {
+        box.innerHTML = "";
+      }, 1600);
+    }
+
+    newQuestion();
+  </script>
+</body>
+</html>
