@@ -47,3 +47,13 @@ test("does not expose template identity in the production homepage", async () =>
   assert.doesNotMatch(html, /ai-website-clone-template/i);
   assert.doesNotMatch(html, /JCodesMore/i);
 });
+
+test("exports explicit MIME types for legacy extension-compatible assets", async () => {
+  const headers = await readFile("out/_headers", "utf8");
+
+  assert.match(headers, /\/h\/me\/me-xter\/[*][.]php\s+Content-Type: image\/png/);
+  assert.match(
+    headers,
+    /\/h\/readcookies[.]php\s+Content-Type: application\/json; charset=utf-8/,
+  );
+});
