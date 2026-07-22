@@ -1,0 +1,491 @@
+.embed-container {
+  position: relative;
+  overflow: hidden;
+}
+
+#video {
+  display: none;
+}
+
+#rotate_icon_container {
+  text-align: center;
+  position: relative;
+  display: none;
+}
+#rotate_icon {
+  position: absolute;
+}
+.close-btn {
+  position: absolute;
+  display: none;
+}
+.close-btn img {
+  width: 100%;
+}
+.close-btn:focus,
+.close-btn:hover {
+  outline-offset: 5px;
+}
+.close-btn:focus img,
+.close-btn:hover img,
+.next-btn:focus img,
+.next-btn:hover img  {
+  width: 100%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+.video-js .vjs-big-play-button:hover,
+.video-js .vjs-big-play-button:focus,
+.video-js .vjs-big-play-button:active,
+.close-btn:hover,
+.close-btn:focus,
+.close-btn:active,
+.video-js .vjs-big-play-button:focus,
+.next-btn:focus img,
+.next-btn:hover img {
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 7px #fff;
+    outline: 4px solid #000;
+    outline-offset: 5px;
+}
+
+.video-js .vjs-time-tooltip,
+.vjs-volume-tooltip {
+    padding: 5px 8px 1px !important;
+    transform: translateY(22px) !important; /* Adjust this value as needed */
+}
+
+.nextbtn-container {
+  position: absolute;
+  display: none;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 199;
+}
+
+.next-btn img {
+  width: 100%;
+}
+
+.vjs-texttrack-settings {
+  /*display: none !important;*/
+}
+
+.vjs-subs-caps-button {
+    display: none !important;
+}
+
+.cc-switch, 
+.speed-select {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    height: 76%;
+    border-radius: 5px;
+    /* margin-top: 7%; */
+    /* position: relative; */
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 0px 5px;
+    margin-right:4px;
+}
+/* The switch - the box around the slider */
+.cc-switch .switch {
+    position: relative;
+    display: flex;
+    width: 67px;
+    height: 23px;
+    align-items: center;
+}
+
+/* Hide default HTML checkbox */
+.cc-switch .switch input {
+    outline: 2px solid #fff;
+    position: absolute;
+    right: 10px;
+    height: 2px;
+    width: 2px;
+}
+
+/* The slider */
+.cc-switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4d4d4d;
+    -webkit-transition: .4s;
+    transition: .4s;
+    width: 39px;
+}
+
+.cc-switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    border: 2px solid #000;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.cc-switch input:checked + .slider {
+    background-color: #fff;
+}
+
+.cc-switch input:focus + .slider {
+    box-shadow: 0 0 1px #fff;
+}
+
+.cc-switch input:checked + .slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+}
+
+/* Rounded sliders */
+.cc-switch .slider.round {
+    border-radius: 34px;
+    border: 1px solid #fff;
+}
+
+.cc-switch .slider.round:before {
+    border-radius: 50%;
+}
+
+.vjs-has-started .vjs-control-bar, .vjs-audio-only-mode .vjs-control-bar {
+    align-items: center;
+}
+
+.vjs-menu-button-popup .vjs-menu {
+  left: -6em !important;
+}
+
+.vjs-custom-waiting .vjs-loading-spinner {
+  display: block;
+}
+.video-js.vjs-custom-waiting .vjs-loading-spinner:before,
+.video-js.vjs-custom-waiting .vjs-loading-spinner:after {
+  /* I just copied the same animation as in the default css file */
+  -webkit-animation: vjs-spinner-spin 1.1s cubic-bezier(0.6, 0.2, 0, 0.8)
+      infinite,
+    vjs-spinner-fade 1.1s linear infinite;
+  animation: vjs-spinner-spin 1.1s cubic-bezier(0.6, 0.2, 0, 0.8) infinite,
+    vjs-spinner-fade 1.1s linear infinite;
+}
+.video-js.vjs-custom-waiting .vjs-loading-spinner {
+  -webkit-animation: 0s linear 0.3s forwards vjs-spinner-show;
+  animation: 0s linear 0.3s forwards vjs-spinner-show;
+}
+
+.vjs-modal-dialog .vjs-modal-dialog-content {
+    font-size:1.4em;
+}
+
+.vjs-custom-transcript {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px !important;
+    padding: .8em !important;
+}
+
+.player-select select {
+    appearance: none;         /* Remove default styling */
+    -webkit-appearance: none; /* Safari */
+    -moz-appearance: none;    /* Firefox */
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 150px;    
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+}
+
+
+a.vjs-custom-transcript:focus-visible,
+.video-js button:focus-visible,
+.cc-switch input:focus-visible,
+.cc-switch:focus-within,
+.speed-select:focus-visible,
+.speed-select:focus-within {
+    outline: 2px solid #fff;
+    box-shadow: inset 0px 0px 0px 2px #000;
+    border-radius:4px;
+}
+
+.video-js .vjs-control-bar {
+    height: 51px !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.vjs-text-track-display {
+    bottom: 5em !important;
+}
+
+.vjs-custom-transcript img {
+    width: 82%;
+}
+
+.vjs-menu li {
+    padding: .2em .2em !important;
+    font-size: 1.4em !important;
+    cursor: pointer;
+}
+
+.vjs-menu {
+    display: none !important;
+}
+
+.vjs-speed-btn,
+.vjs-remaining-time-display,
+.vjs-captions-btn
+{
+    font-size: 1.2em !important;
+}
+
+.modal {
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    overflow: auto;
+}
+
+.modal-header-copy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #fff;
+    color: #000;
+    padding: 16px;
+    border-radius: 12px;
+    min-width: 200px;
+    max-width: 90%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    position: relative;
+    min-width:300px;
+}
+
+.modal-content form {
+    margin: 20px;    
+}
+
+.modal-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.modal-options label {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.close-btn {
+    position: absolute;
+    display: none;
+}
+
+.modal-title-copy {
+    font-weight: bold;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal-header-copy .close-btn-modal {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: unset;
+}
+
+.close-btn-modal {
+    margin: auto;
+    background-color: #6c757d;
+    color:#fff;
+    border: 0px;
+    padding:.4rem;
+    border-radius: 0.375rem;
+    font-size: 1em;
+}
+
+.close-btn-modal:hover,
+.close-btn-modal:active,
+.close-btn-modal:focus-within {
+    background-color: #646464;
+    outline:2px solid #000;
+    cursor: pointer;
+}
+
+.rate-speed-wrapper {
+    font-size: .9em;
+}
+
+.rate-speed-wrapper label {
+    position: absolute;
+    top: 9999px;    
+}
+
+.vjs-menu:focus-within {
+    /*display: block !important*/
+}
+
+.sing_along_controls {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+}
+.sing_along_controls div {
+  display: grid;
+  width: 90px;
+  height: 70px;
+  place-items: center;
+  border: 4px solid #173c51;
+  border-radius: 50%;
+  background: #fff;
+  color: #173c51;
+  box-shadow: 0 4px 0 #173c51;
+  text-align: center;
+  cursor: pointer;
+  font: 900 38px/1 Arial, sans-serif;
+}
+.sing_along_controls .prev_btn {
+  background: #fff;
+}
+.sing_along_controls .prev_btn::before {
+  content: "←";
+}
+.sing_along_controls .play_btn {
+  background: #fff;
+}
+.sing_along_controls .play_btn::before {
+  content: "▶";
+}
+.sing_along_controls .pause_btn {
+  background: #fff;
+  display: none;
+}
+.sing_along_controls .pause_btn::before {
+  content: "Ⅱ";
+}
+.sing_along_controls .next_btn {
+  background: #fff;
+}
+.sing_along_controls .next_btn::before {
+  content: "→";
+}
+.sing_along_controls div:active {
+  background: #ffd34d;
+  box-shadow: 0 1px 0 #173c51;
+  transform: translateY(3px);
+}
+
+/*.video-js:hover .vjs-big-play-button .vjs-icon-placeholder:before,
+.video-js:hover .vjs-big-play-button:focus .vjs-icon-placeholder:before {
+  top: -3px;
+}
+a:focus, button:focus {
+  outline-width: 3px;
+  outline-style: solid;
+  outline-color: #000;
+  display: inline-block;
+}*/
+
+a:hover, a:focus{
+  border:none;
+  outline: none;
+}
+/* .close-btn:focus img, .close-btn:hover img {
+  box-shadow: 0px 0px 0px 4px #fff;
+} */
+
+.vjs-play-control {
+    width: 3em !important;
+}
+
+.vjs-playback-rate .vjs-menu {
+    left: 0 !important;
+}
+
+.vjs-control-bar {
+    font-size: .9rem;
+    padding: 4px 0px;
+}
+
+.vjs-close-button.vjs-control.vjs-button .vjs-control-text,
+.vjs-modal-dialog-content .vjs-control-text,
+.vjs-modal-dialog .vjs-control-text,
+.vjs-modal-dialog-description.vjs-control-text,
+.vjs-loading-spinner .vjs-control-text {
+    font-size:14pt;
+}
+
+.video-js .vjs-control {
+    /*width: 4.5em !important;*/
+    margin-right: 10px !important;
+}
+
+.video-js:hover .vjs-big-play-button, .video-js .vjs-big-play-button:focus,
+.video-js .vjs-big-play-button {
+    background-color: #2B333F !important;
+}
+
+
+.safari-desktop video::-webkit-media-text-track-display-backdrop {
+    transform: translateY(-70px);
+    background-color: #000;
+    opacity: 1;
+    padding:3px;
+}
+
+.safari-iphone video::-webkit-media-text-track-display-backdrop {
+    transform: translateY(-30px);
+    background-color: #000;
+    opacity: 1;
+    padding:3px;
+}
+
+@media (orientation: landscape) {
+    .modal {
+        font-size: 16px; /* Keep it the same */
+    }
+}
+
+

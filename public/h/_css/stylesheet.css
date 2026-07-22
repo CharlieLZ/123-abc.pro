@@ -1,0 +1,132 @@
+body {
+    margin: 0px 0px 0px 0px; /* the extra 1px allows the iOS inner/outer check to work */
+    background: #000000;
+}
+
+#orientation {
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/h/_images/rotate-phone-icon-white.png);
+    background-size: 109px 122px;
+    background-repeat: no-repeat;
+    background-position: center 80%;
+    /*background-color: rgb(147, 204, 76);*/
+    z-index: -999;
+    display: none;
+}
+
+@font-face {
+    font-family: 'VAGzStarBold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('VAGzStarBold'), url('/gi/_font/StarfallvBP/vrzb___starbold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'VAGzStarLight';
+    font-style: normal;
+    font-weight: normal;
+    src: local('VAGzStarLight'), url('/gi/_font/StarfallvBP/vrzl___starlight-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'VAGzStarThin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('VAGzStarThin'), url('/gi/_font/StarfallvBP/vrzt___starthin-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'LiberationSans_Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('LiberationSans_Regular'), url('/gi/_font/Liberation/LiberationSans-Regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Liberation Sans Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('LiberationSans_Regular'), url('/gi/_font/Liberation/LiberationSans-Regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Liberation Sans';
+    font-style: normal;
+    font-weight: normal;
+    src: local('LiberationSans_Regular'), url('/gi/_font/Liberation/LiberationSans-Regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Liberation Sans Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('LiberationSans-Bold-webfont'), url('/gi/_font/Liberation/LiberationSans-Bold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Liberation Sans Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('LiberationSans-BoldItalic-webfont'), url('/gi/_font/Liberation/LiberationSans-BoldItalic-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: VAGzStarBold;
+    font-style: normal;
+    font-weight: normal;
+    src: url(/gi/_font/StarfallvBP/vrzb___starbold-webfont.woff) format(woff);
+}
+
+@font-face {
+    font-family: VAGzStarLight;
+    font-style: normal;
+    font-weight: normal;
+    src: url(/gi/_font/StarfallvBP/vrzl___starlight-webfont.woff) format(woff);
+}
+
+@font-face {
+    font-family: VAGzStarThin;
+    font-style: normal;
+    font-weight: normal;
+    src: url(/gi/_font/StarfallvBP/vrzt___starthin-webfont.woff) format(woff);
+}
+
+@font-face {
+    font-family: LiberationSans_Regular;
+    font-style: normal;
+    font-weight: normal;
+    src: url(/gi/_font/Liberation/LiberationSans-Regular-webfont.woff) format(woff);
+}
+
+@font-face {
+    font-family: Liberation Sans Regular;
+    font-style: normal;
+    font-weight: normal;
+    src: url(/gi/_font/Liberation/LiberationSans-Regular-webfont.woff) format(woff);
+}
+
+@font-face {
+    font-family: Liberation Sans;
+    font-style: normal;
+    font-weight: normal;
+    src: url(/gi/_font/Liberation/LiberationSans-Regular-webfont.woff) format(woff);
+}
+
+@font-face {
+    font-family: Liberation Sans Bold;
+    font-style: normal;
+    font-weight: normal;
+    src: url(/gi/_font/Liberation/LiberationSans-Bold-webfont.woff) format(woff);
+}
+
+@font-face {
+    font-family: Liberation Sans Bold Italic;
+    font-style: normal;
+    font-weight: normal;
+    src: url(/gi/_font/Liberation/LiberationSans-BoldItalic-webfont.woff) format(woff);
+}

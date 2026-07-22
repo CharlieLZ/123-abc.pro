@@ -1,0 +1,125 @@
+html {
+    overflow: unset;
+}
+
+html.is-tablet-mode {
+    overflow: hidden;
+}
+
+body {
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    height: calc(100dvh + 120px);
+    min-height: calc(100dvh + 120px) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100dvw !important;
+}
+
+body:fullscreen {
+    overflow-y: hidden !important;
+}
+
+button.sf-no-link {
+    padding:0px;
+    background:none;
+    border:none;
+}
+
+#animation_container {
+    position: relative !important;
+    overflow:visible;
+    width: 100%;
+}
+
+#animation_container #dom_overlay_container,
+#animation_container #dom_overlay_container #_preload_div_ {
+    overflow:visible !important;
+    height: 100% !important;
+    max-height: 100dvh !important;
+    width: 100% !important;
+}
+
+.font_preload.hidden {
+    display: none;
+}
+
+div:has(canvas):not(.animation_container):not(#wrapper):not(#animation_container):not(#gameCanvas):not(#game) {
+    max-height: 100dvh !important;
+    position: relative;
+    margin-top: 0px !important;
+}
+
+@media print {
+    footer {
+        display: none;
+    }
+    
+    body {
+        height: 100vh !important;
+        max-height: 100vh !important;
+        min-height: 100vh !important;
+    }
+}
+
+body:fullscreen footer {
+    display: none;
+}
+
+footer.sf-custom-footer {
+    position:relative;
+    background-color:#147d16;
+    font-size:16px !important;
+    width:100%;
+    text-align:center;
+    padding:5px 0px;
+    box-sizing: border-box;
+    font-family: "Starfall Block", Arial, "sans-serif";
+    height: max-content;
+    text-align:center;
+    -webkit-font-smoothing: auto !important;
+    z-index:100;
+}
+
+footer.sf-custom-footer a:link,
+footer.sf-custom-footer a:visited,
+button.sf-no-link {
+    color:#fff;
+}
+
+footer.sf-custom-footer a:hover,
+footer.sf-custom-footer a:active,
+button.sf-no-link {
+    color:#fff;
+    text-decoration: underline;
+}
+
+footer.sf-custom-footer .sf-accessible-content-activity {
+    padding:6px;
+}
+
+footer.sf-custom-footer .sf-accessible-content-activity a:focus-visible {
+    outline: 2px solid #fff;
+    border-radius: 6px;
+}
+
+footer.sf-custom-footer a:link {
+    display:inline;
+    padding: 0 10px;
+}
+
+.is-tablet-mode body {
+    min-height: 100dvh !important;
+    max-height: 100dvh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+    visibility: visible;
+    flex-direction: unset;
+    justify-content: unset;
+    display: block;
+}
+
+.is-tablet-mode body footer.sf-custom-footer {
+    visibility: hidden;
+}

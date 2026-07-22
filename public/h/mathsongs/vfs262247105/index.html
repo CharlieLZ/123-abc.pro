@@ -1,0 +1,89 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+      <title>Five Little Frogs - Video Activity</title>
+  	<script src="/h/_js/video/acv-cookie.js?ds=20201201"></script>	
+  <link href="/h/_css/video/main-v2.css?ds=20250328" rel="stylesheet">
+  <link href="/h/_css/videojs/videojs-8.16.1.min.css" rel="stylesheet">
+  <script src="/h/_js/videojs/videojs-8.16.1.js"></script>
+	<script src="/h/_js/videojs/videojs-contrib-hls.min.js?ds=20200601"></script>
+	<script src="/h/_js/starfall/utils/Tracking.js?ds=20200601"></script>
+	<script src="/h/_js/video/main-v2.js?ds=20250328"></script>
+	<script src="/h/_js/jquery/jquery-2.2.4.min.js"></script>
+	<script>
+		var SpecialDefinitions = {
+			pageTitle: "Five Little Frogs",
+			backgroundColor: "#007800",
+			rateCode: "DEMO_h_mathsongs_5frogs",
+			exitURL: "/h/mathsongs/index.html?sn=abcs&mg=m",
+			showProgressBar: true,
+			nRateInterval: 25,
+			greenArrowInterval: "10",
+			HLSVideoURL: "",
+			mp4VideoURL: "/h/_videos/cfs1/h_mathsongs_5frogs-v1-q120-a40.mp4",
+			poster: "/h/_videos/cfs1/posters/h_mathsongs_5frogs_poster.jpg?ds=20200709",
+			captionURL: "",
+			isCaptionsOn: true,
+			loadPagesFromVTT: true,
+			ClosedCaptionSize: 100,
+			SpaceBarArrowControls: true,
+			AudioMuteViaKeyBoard: false,
+			PlaybackSpeed: 100,
+			FocusColor: "#FFFFFF",
+			AudioVolume: 100,
+			useJS2ReadCookie: false,
+      transcriptLink: '/h/mathsongs/trn/h_mathsongs_5frogs.html'		};
+
+		function init() {
+			if(SpecialDefinitions.useJS2ReadCookie){
+				readCookieAndSetSpecialVars("acv", SpecialDefinitions);
+			}
+			StarfallStreamVideoMain.init(".embed-container","#video",SpecialDefinitions);
+			$("body").css("background-color",SpecialDefinitions.backgroundColor);
+			$("#rotate_icon_container").css("background-color",SpecialDefinitions.backgroundColor);
+			if(SpecialDefinitions.omitXButton){
+				$("#close-btn").hide();
+			}
+      
+      
+
+      $('.vjs-picture-in-picture-control').remove();
+      $('.vjs-fullscreen-control').remove();
+      setTimeout(function(){
+        $('[title]').removeAttr('title');
+      },100);
+    }
+	</script>
+<link rel="stylesheet" href="/h/full-access/support.css">
+</head>
+
+<body onload="init();" style="margin:0px; background-color:#007800;">
+<main>
+  <h1 style="position:absolute;left:-9999px;">Five Little Frogs</h1>
+	<div>
+		<div class="embed-container">
+			<video id="video" class="video-js vjs-big-play-centered" controls preload="metadata" playsinline data-setup='{"playbackRates":[0.5,1,1.5,2]}'></video>
+      <div class="nextbtn-container">
+        <a href="/h/mathsongs/index.html?sn=abcs&mg=m" class="next-btn"><img src="/h/_images/video/next-button.png?ds=20200810" alt="next"></a>
+      </div>
+		</div>    
+	</div>
+	<div id="close-btn">
+		<a href="/h/mathsongs/index.html?sn=abcs&mg=m" class="close-btn"><img src="/h/_images/video/close-button.png?ds=20200810" alt="close"></a>
+	</div>
+	<div id="rotate_icon_container">
+		<img id="rotate_icon" src="/h/_images/rotate-phone-icon-white.png" alt="" />
+	</div>
+</main>
+<script src="/h/full-access/support.js"></script>
+</body>
+</html>

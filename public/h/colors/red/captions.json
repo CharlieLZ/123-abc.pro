@@ -1,0 +1,49 @@
+{
+  "red": [
+    {
+      "start": 256,
+      "end": 1138,
+      "caption": "♪ One, two, three ♪"
+    },
+    {
+      "start": 1138,
+      "end": 4188,
+      "caption": "♪ Well I'm rockin' round with the color red ♪"
+    },
+    {
+      "start": 4188,
+      "end": 7154,
+      "caption": "♪ I got a red hot tune right here in my head ♪"
+    },
+    {
+      "start": 7154,
+      "end": 10383,
+      "caption": "♪ You know cherries are red ♪"
+    },
+    {
+      "start": 10383,
+      "end": 13505,
+      "caption": "♪ A raspberry's red ♪"
+    },
+    {
+      "start": 13505,
+      "end": 16572,
+      "caption": "♪ A firetruck is red ♪"
+    },
+    {
+      "start": 16572,
+      "end": 19149,
+      "caption": "♪ Apples and roses are red, red, red ♪"
+    },
+    {
+      "start": 19149,
+      "end": 21929,
+      "caption": "♪ Yeah I'm rockin' round with the color red ♪"
+    },
+    {
+      "start": 21929,
+      "end": 26929,
+      "caption": "♪ I got a red hot tune and it's all about red ♪"
+    }
+  ]
+}

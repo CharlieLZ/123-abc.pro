@@ -1,0 +1,42 @@
+
+.accessible-content {
+    bottom: -100px;
+    position: fixed;
+    z-index: 20;
+    left: 50%;
+    transform: translate(-50%);
+    transition:all .5s ease;
+}
+
+.accessible-content:focus-within {
+    bottom: 0px;    
+    transition:all .5s ease;
+}
+
+.accessible-content a {
+    min-height: 35px;
+    display: block;    
+    padding:10px;
+    border:2px solid #fff;
+    border-bottom: none;
+    background-color:#147d16;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    font-family: "Starfall Block", Arial, "sans-serif";
+    font-size: 22px;
+    outline: 2px solid #000;
+    outline-offset: 0px;
+    text-decoration: underline !important;
+    line-height: 20px !important;
+    box-sizing: border-box;
+}
+
+.accessible-content a:link,
+.accessible-content a:visited,
+.accessible-content a:hover,
+.accessible-content a:active {
+    color:#fff;
+    text-decoration: underline;
+}
+
+

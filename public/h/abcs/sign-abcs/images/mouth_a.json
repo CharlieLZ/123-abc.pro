@@ -1,0 +1,52 @@
+{"frames": [
+
+{
+	"filename": "mouth_a0001.png",
+	"frame": {"x":1,"y":791,"w":90,"h":38},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":209,"y":5,"w":90,"h":38},
+	"sourceSize": {"w":347,"h":262}
+},
+{
+	"filename": "mouth_a0002.png",
+	"frame": {"x":93,"y":791,"w":90,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":209,"y":8,"w":90,"h":31},
+	"sourceSize": {"w":347,"h":262}
+},
+{
+	"filename": "mouth_a0003.png",
+	"frame": {"x":1,"y":1,"w":347,"h":262},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":347,"h":262},
+	"sourceSize": {"w":347,"h":262}
+},
+{
+	"filename": "mouth_a0004.png",
+	"frame": {"x":1,"y":265,"w":347,"h":262},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":347,"h":262},
+	"sourceSize": {"w":347,"h":262}
+},
+{
+	"filename": "mouth_a0005.png",
+	"frame": {"x":1,"y":529,"w":344,"h":260},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":2,"w":344,"h":260},
+	"sourceSize": {"w":347,"h":262}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "mouth_a.png",
+	"format": "RGBA8888",
+	"size": {"w":349,"h":830},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:b969457ac4a2c4dd7647347797d6efca:4afa607752e45c381e87e20b65e852ce:728c967510ce5b14b124c28b70cf69ee$"
+}
+}

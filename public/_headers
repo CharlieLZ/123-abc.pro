@@ -1,0 +1,45 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: same-origin
+  Permissions-Policy: camera=(), geolocation=(), microphone=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/_next/static/*
+  Cache-Control: public, max-age=31556952, immutable
+
+/gi/_font/*
+  Cache-Control: public, max-age=31556952, immutable
+
+/*.mp3
+  Cache-Control: public, max-age=31556952, immutable
+
+/*.mp4
+  Cache-Control: public, max-age=31556952, immutable
+
+/*.gif
+  Cache-Control: public, max-age=31556952, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=31556952, immutable
+
+/*.png
+  Cache-Control: public, max-age=31556952, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31556952, immutable
+
+/h/_js/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/h/_css/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/cc/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
