@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="A local interactive learning activity from 123 ABC Pro.">
+  <title>Green Color Adventure | 123 ABC Pro</title>
+  <link rel="stylesheet" href="/h/full-access/activity.css">
+  <link rel="stylesheet" href="/h/full-access/support.css">
+</head>
+<body data-abcpro-activity="color-green">
+  <header class="game-toolbar">
+    <a class="brand-wordmark" href="/" aria-label="123 ABC Pro home">123 ABC Pro</a>
+    <div class="progress-track" role="progressbar" aria-label="Activity progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress-fill" class="progress-fill"></div></div>
+    <button id="sound-button" class="icon-button" type="button" title="Listen" aria-label="Listen">♪</button>
+    <button class="icon-button" type="button" title="Help" aria-label="Help and accessibility" data-abcpro-action="help">?</button>
+    <a class="icon-button" href="/h/colors/index.html?sn=abcs&full=1" title="Close" aria-label="Close activity">×</a>
+  </header>
+  <main class="activity-shell">
+    <section id="intro-screen" class="screen">
+      <div class="hero-art" aria-hidden="true"><div id="hero-symbols" class="hero-symbols"></div></div>
+      <h1 id="activity-title"></h1>
+      <p id="activity-kicker" class="intro-kicker"></p>
+      <button id="start-button" class="play-button" type="button" aria-label="Start activity">▶</button>
+    </section>
+    <section id="game-screen" class="screen" hidden>
+      <h2 id="prompt"></h2>
+      <div id="prompt-visual" class="prompt-visual" role="img"></div>
+      <div id="choices" class="choice-grid"></div>
+      <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+      <button id="next-button" class="next-button" type="button" hidden>Next →</button>
+    </section>
+    <section id="complete-screen" class="screen" hidden>
+      <div class="completion-stars" aria-hidden="true">★★★</div>
+      <h2 id="complete-title"></h2>
+      <p class="complete-copy">Activity complete</p>
+      <div class="completion-actions">
+        <button id="restart-button" class="restart-button" type="button">↻ Play again</button>
+        <a class="next-button" href="/h/colors/index.html?sn=abcs&full=1">Back to activities</a>
+      </div>
+    </section>
+  </main>
+  <script>window.ABCPRO_ACTIVITY = {"key": "color-green", "kind": "color", "label": "green", "title": "Green Color Adventure", "kicker": "Look, listen, find, and paint.", "symbols": ["🐸", "🍃", "🍐"], "accent": "#35a853", "accentDark": "#176128", "completeTitle": "You know green!", "questions": [{"prompt": "Find green.", "choices": [{"label": "gray", "color": "#8b939c", "ink": "#172431", "correct": false}, {"label": "green", "color": "#35a853", "ink": "#fff", "correct": true}, {"label": "pink", "color": "#f06ca8", "ink": "#172431", "correct": false}, {"label": "red", "color": "#ef3f36", "ink": "#fff", "correct": false}], "success": "That is green!"}, {"prompt": "Find three green things.", "kind": "multi", "correctCount": 3, "choices": [{"label": "🐸 frog", "correct": true}, {"label": "🍃 leaf", "correct": true}, {"label": "🍐 pear", "correct": true}, {"label": "🎃 pumpkin", "correct": false}, {"label": "🐳 whale", "correct": false}], "success": "You found the green things!"}, {"prompt": "Paint six squares green.", "kind": "paint", "cells": 18, "goal": 6}]};</script>
+  <script src="/h/full-access/support.js"></script>
+  <script src="/h/full-access/activity.js"></script>
+</body>
+</html>

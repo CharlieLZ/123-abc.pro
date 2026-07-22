@@ -1,0 +1,33 @@
+{
+    "Primary_Colors":{
+        "red":"EE0000", 
+        "blue":"1F2AFF", 
+        "yellow":"FFEA00"
+    },
+    "Color_Mix_2":{
+        "red1_yellow":["FE7708", "FDB104", "FED002"],
+        "red2_yellow":["F85900", "FE7708", "FF9505"],
+        "red3_yellow":["F51E00", "FE580A", "FE7708"],
+
+        "red1_blue":["9408b0", "6254BF", "2b00d5"],
+        "red2_blue":["9f007e", "9408b0", "6004C3"],
+        "red3_blue":["B31340", "92006d", "9408b0"],
+
+        "blue1_yellow":["00b500", "99c122", "cce200"],
+        "blue2_yellow":["007367", "00b500", "9fbd2b"],
+        "blue3_yellow":["00667a", "1a8456", "00b500"]
+    },
+    "Color_Mix_3":{
+        "red1_yellow1_blue":["aa6739", "665a67", "49557a"],
+        "red1_yellow2_blue":["cc9c22", "928449", "71765f"],
+        "red1_yellow3_blue":["dbb318", "aa9b39", "8b7c4e"],
+
+        "red2_yellow1_blue":["cc3e22", "924049", "71425f"],
+        "red2_yellow2_blue":["db7018", "aa6739", "8b614e"],
+        "red2_yellow3_blue":["e38c13", "b97f2f", "9d7642"],
+
+        "red3_yellow1_blue":["db2c18", "aa3239", "8b364e"],
+        "red3_yellow2_blue":["e35713", "b9542f", "9d5242"],
+        "red3_yellow3_blue":["e87210", "c46c27", "aa6739"]
+    }
+}

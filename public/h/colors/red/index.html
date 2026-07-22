@@ -1,0 +1,92 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<meta name="HandheldFriendly" content="true" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi minimal-ui" />
+<title>123 ABC Pro Colors: What is Red?</title>
+<meta name="description" content="Learn all about colors with 123 ABC Pro. What is red? Fire trucks, stop signs, cherries, apples and roses are red. Sing a red hot tune and learn more color words." />
+<style>
+
+  #rotate_icon_container{
+      text-align: center;
+      display: none;
+      position:relative;
+      padding-top:10px;
+  }
+
+
+  body > img:last-child[style="visibility: hidden;"]{ display: none; }
+</style>
+<!-- Fonts -->
+<link rel="stylesheet" href="/gi/_font/StarfallvBP/StarfallvBP.css">
+<!--global scripts-->
+<script src="../../_js/starfall/global/Cookies.js"></script>
+<script src="../../_js/createjs/createjs-2015.11.26.min.js"></script>
+<script src="../../_js/proton/proton-2.1.0.min.js"></script>
+<script src="../../_js/vikram/sparkles.js"></script>
+<script src="../../_js/starfall/utils/Tracking.js"></script>
+<script src="../../_js/vikram/captions.js?ds=20190730"></script>
+<!--activity specific js-->
+<script src="js/intro.js?ds=20181024"></script>
+<script src="js/activity1.js"></script>
+<script src="js/activity2.js"></script>
+<script src="js/activity3.js?ds=20190906"></script>
+<script src="js/outro.js"></script>
+<script src="/h/_js/starfall/utils/CanvasResizer.js?ts=20240429"></script>
+<script src="js/main.js?ds=20240118"></script>
+<!-- write your code here -->
+<link rel="stylesheet" href="/h/_css/activities.css?ds=20260604" type="text/css"><script type="text/javascript" src="/h/_js/starfall/utils/activities.js"></script>
+<link rel="stylesheet" href="/h/full-access/support.css">
+</head>
+<body style="margin:0px; background-color:#FF0000;">
+	<div id="animation_container" style="background-color:rgba(226, 225, 225, 1.00); width:100%; height:100%">
+		<canvas id="canvas" width="1100" height="768" style="display: block; background-color:rgba(226, 225, 225, 1.00); -webkit-tap-highlight-color: transparent;"></canvas>
+    <div id="rotate_icon_container">
+      <img id="rotate_icon" src="../../_images/rotate-phone-icon-bl.png" />
+    </div>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:100%; height:100%; position: absolute; left: 0px; top: 0px; display: block;">
+			<div id='_preload_div_' style='background:#FF0000; display: inline-block; height:100%; width: 100%; vertical-align:middle;position:absolute;left:0px;top:0px;text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src="../../_images/web-system-wide-loading-stars-GIF.gif?1498454704922" style='vertical-align: middle; max-width: 100%; max-height: 100%'/></div>
+		</div>
+	</div>
+
+	<script>
+	var SpecialDefinitions = {
+		rateCode: 'DEMO_h_colors_red',
+		exitURL: "/h/colors/index.html?mg=m",
+		globalAssetAtlasURL:"../images/global_assets_atlas_.png",
+		avatarVariable:"1782435541003",
+		avatarLoadBaseURL: "/h/me/me-xter/",
+		isCaptionsOn: 0	}
+	var cookieValue;
+	Cookies.init();
+    var __interval = setInterval(checkCookies, 100);
+	function checkCookies(){
+		if(Cookies.cookiesLoaded) {
+			clearInterval(__interval);
+			cookieValue = Cookies.cookiesValues["c1"] || [];
+			var xterCookie =  Cookies.cookiesValues["h5"] || '0251213045000';
+			init(SpecialDefinitions.avatarLoadBaseURL,xterCookie);
+		} else {
+			if (__interval == null) {
+				__interval = setInterval(checkCookies, 100);
+			}
+		}
+	}
+	function saveCookie(id){
+		if(cookieValue.indexOf(id)===-1){
+			cookieValue+=id;
+			Cookies.setCookieValue("c1",cookieValue);
+		}
+	}
+	</script>
+<footer class="sf-custom-footer"><div class="sf-accessible-content-activity"><a href="/h/accessibility/index.html" class="accessible-link">Accessibility Information</a><a href="/h/colors/index.html?mg=m">Back</a></div></footer>
+<script src="/h/full-access/support.js"></script>
+</body>
+</html>

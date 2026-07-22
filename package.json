@@ -1,0 +1,60 @@
+{
+  "name": "123-abc-pro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bilingual English alphabet and early phonics activities for young learners",
+  "author": "CharlieLZ",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CharlieLZ/123-abc.pro.git"
+  },
+  "homepage": "https://123-abc.pro",
+  "bugs": {
+    "url": "https://github.com/CharlieLZ/123-abc.pro/issues"
+  },
+  "keywords": [
+    "alphabet",
+    "phonics",
+    "bilingual-learning",
+    "early-education",
+    "nextjs",
+    "cloudflare-pages"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && node scripts/deduplicate-build.mjs out",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "audit:dependencies": "npm audit --registry=https://registry.npmjs.org --audit-level=moderate",
+    "verify:assets": "node scripts/verify-static-assets.mjs public",
+    "verify:export": "node scripts/verify-static-assets.mjs out",
+    "test": "node --test tests/unit/*.test.mjs",
+    "test:integration": "node --test tests/integration/*.test.mjs",
+    "test:e2e": "playwright test",
+    "check": "npm run lint && npm run typecheck && npm run verify:assets && npm run test && npm run build && npm run test:integration && npm run verify:export"
+  },
+  "dependencies": {
+    "next": "16.2.11",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.61.1",
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.11",
+    "typescript": "^5"
+  },
+  "overrides": {
+    "next": {
+      "postcss": "8.5.10",
+      "sharp": "0.35.3"
+    }
+  }
+}

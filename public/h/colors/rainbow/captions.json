@@ -1,0 +1,44 @@
+{
+  "rainbow": [
+    {
+      "start": 339,
+      "end": 3635,
+      "caption": "♪ The grass is green and roses are red ♪"
+    },
+    {
+      "start": 3635,
+      "end": 6932,
+      "caption": "♪ Very pretty colors in my head ♪"
+    },
+    {
+      "start": 6932,
+      "end": 10369,
+      "caption": "♪ I like colors, yes I do ♪"
+    },
+    {
+      "start": 10369,
+      "end": 13997,
+      "caption": "♪ Purple and orange and yellow too ♪"
+    },
+    {
+      "start": 13997,
+      "end": 17101,
+      "caption": "♪ Colors, colors, I like pretty colors ♪"
+    },
+    {
+      "start": 17101,
+      "end": 20502,
+      "caption": "♪ Colors in a rainbow and more colors too ♪"
+    },
+    {
+      "start": 20502,
+      "end": 23763,
+      "caption": "♪ Colors, colors, I like pretty colors ♪"
+    },
+    {
+      "start": 23763,
+      "end": 27326,
+      "caption": "♪ Red and yellow, purple, orange, green and blue ♪"
+    }
+  ]
+}

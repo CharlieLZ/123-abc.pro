@@ -1,0 +1,42 @@
+@font-face
+{
+    font-family: "VAGzStarBold";
+    src: url(/gi/_font/StarfallvBP/vrzb___starbold-webfont.woff) format('woff');
+}
+
+@font-face
+{
+    font-family: "VAGzStarLight";
+    src: url(/gi/_font/StarfallvBP/vrzl___starlight-webfont.woff) format('woff');
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    overflow: hidden; 
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+#status {
+    font-family: "VAGzStarBold", verdana;
+    width: 100%;
+    position: absolute;
+    margin-top: 70px; 
+    cursor: pointer; 
+}
+#welcome {
+    font-family: "VAGzStarBold", verdana;
+    margin-top: 70px;
+}
+#wrapper {
+    width: 100vw; 
+    overflow: hidden;
+}
+#canvas {
+    font-family: "VAGzStarBold", verdana;
+    position: relative;
+} 
+#instruction {
+    margin: 10px auto;
+}
