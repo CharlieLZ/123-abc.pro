@@ -41,6 +41,14 @@ test("exports crawler metadata with the canonical production host", async () => 
   assert.match(sitemap, /<loc>https:\/\/123-abc[.]pro\/?<\/loc>/);
 });
 
+test("exports the production GA4 and Plausible integrations", async () => {
+  const html = await readFile("out/index.html", "utf8");
+
+  assert.match(html, /G-R2773M62DS/);
+  assert.match(html, /data-domain="123-abc[.]pro"/);
+  assert.match(html, /https:\/\/click[.]pageview[.]click\/js\/script[.]js/);
+});
+
 test("does not expose template identity in the production homepage", async () => {
   const html = await readFile("out/index.html", "utf8");
 
