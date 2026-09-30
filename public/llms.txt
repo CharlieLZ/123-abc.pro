@@ -1,0 +1,58 @@
+# 123 ABC Pro
+
+> Bilingual English and Chinese practice site for the English alphabet and early phonics: 26 interactive letter activities, alphabet and vowel songs, colour activities, number songs, and a short guide for parents. No account or sign-in is required.
+
+Everything runs in the browser on phones and desktop screens. The activities are in English; the home page shows its headings, highlights, parent guide, privacy notice, and independence notice in English and Simplified Chinese. Every letter has its own page, from https://123-abc.pro/h/abcs/letter-a/ through https://123-abc.pro/h/abcs/letter-z/.
+
+There is no account, checkout, or paid tier on the site. A nickname, an access preference, and activity progress are kept in this browser's local storage, and clearing the site's browser data removes them. Accessible videos include captions, the video pages link to local transcripts, new activities respect the device reduced-motion setting, and the hosting provider may process basic security logs and privacy-focused traffic measurements.
+
+Parents are encouraged to keep sessions short (about five to ten minutes), stay nearby, and keep the volume comfortable. The activities support practice; they do not diagnose learning needs and do not replace a teacher or qualified specialist.
+
+123 ABC Pro is an independent learning project. It is not affiliated with, sponsored by, or endorsed by Starfall Education Foundation or other referenced brands; some learning resources are used with authorization, and trademarks remain the property of their respective owners.
+
+## Core pages
+- [Home](https://123-abc.pro/): the alphabet board with all 26 letters, the activity rail, the bilingual parent guide, and the privacy and independence notices.
+- [ABC song](https://123-abc.pro/h/abcs/song/): the interactive alphabet song.
+- [Alphabet in sign language](https://123-abc.pro/h/abcs/sign-abcs/): a hand sign for each letter of the alphabet.
+- [Colour games](https://123-abc.pro/h/colors/): colour activities, including mixing paint to make new colours.
+- [Number songs](https://123-abc.pro/h/mathsongs/): counting and number songs, such as Five Little Bears and Ten Little Kittens.
+
+## Letters
+- [Letter A](https://123-abc.pro/h/abcs/letter-a/): ant, apple, astronaut, and alligator words and sounds.
+- [Letter B](https://123-abc.pro/h/abcs/letter-b/): bouncing balls, bears, buzzing bees, and boys.
+- [Letter C](https://123-abc.pro/h/abcs/letter-c/): camera, cat, cow, and computer.
+- [Letter D](https://123-abc.pro/h/abcs/letter-d/): ducks, dolls, drums, and dinosaurs.
+- [Letter E](https://123-abc.pro/h/abcs/letter-e/): elevator, elephants, and eggs.
+- [Letter F](https://123-abc.pro/h/abcs/letter-f/): a fox, fingers, and floating fish.
+- [Letter G](https://123-abc.pro/h/abcs/letter-g/): a guitar-playing gorilla and a gumball machine.
+- [Letter H](https://123-abc.pro/h/abcs/letter-h/): horns, helicopter, horse, and hummingbird.
+- [Letter I](https://123-abc.pro/h/abcs/letter-i/): igloo, iguana, and insect.
+- [Letter J](https://123-abc.pro/h/abcs/letter-j/): jet, jellybean, and jump.
+- [Letter K](https://123-abc.pro/h/abcs/letter-k/): a kitten, a kangaroo, and a koala.
+- [Letter L](https://123-abc.pro/h/abcs/letter-l/): lightning, lips, and locks.
+- [Letter M](https://123-abc.pro/h/abcs/letter-m/): moon, mountain, masks, and motorcycle.
+- [Letter N](https://123-abc.pro/h/abcs/letter-n/): night, net, and nest.
+- [Letter O](https://123-abc.pro/h/abcs/letter-o/): octopus, ostrich, and on and off.
+- [Letter P](https://123-abc.pro/h/abcs/letter-p/): pizza, pig, and puppies.
+- [Letter Q](https://123-abc.pro/h/abcs/letter-q/): questions, queens, and quilts.
+- [Letter R](https://123-abc.pro/h/abcs/letter-r/): roses to grow and a rainbow to appear.
+- [Letter S](https://123-abc.pro/h/abcs/letter-s/): snake, skateboard, and sunglasses.
+- [Letter T](https://123-abc.pro/h/abcs/letter-t/): train, tiger, and taxi.
+- [Letter U](https://123-abc.pro/h/abcs/letter-u/): the short-u sound in the middle of words.
+- [Letter V](https://123-abc.pro/h/abcs/letter-v/): the van activity and words such as violin.
+- [Letter W](https://123-abc.pro/h/abcs/letter-w/): wig, wolf, and web.
+- [Letter X](https://123-abc.pro/h/abcs/letter-x/): fox in the box, insects with six legs, and x-ray machines.
+- [Letter Y](https://123-abc.pro/h/abcs/letter-y/): yo-yos, yawning bears, and yodeling.
+- [Letter Z](https://123-abc.pro/h/abcs/letter-z/): animated zoo animals and zippers.
+
+## Vowel songs
+- [Short-a song](https://123-abc.pro/h/abcs/vfs224132994/): the short-a vowel song video.
+- [Short-e song](https://123-abc.pro/h/abcs/vfs224133137/): the short-e vowel song video.
+- [Short-i song](https://123-abc.pro/h/abcs/vfs224133580/): the short-i vowel song video.
+- [Short-o song](https://123-abc.pro/h/abcs/vfs224136143/): the short-o vowel song video.
+- [Short-u song](https://123-abc.pro/h/abcs/vfs224136459/): the short-u vowel song video.
+
+## Optional
+- [Help](https://123-abc.pro/h/help/): how the activities, video controls, captions, and the Full Access setting work.
+- [Accessibility](https://123-abc.pro/h/accessibility/): keyboard navigation, captions and transcripts, and reduced-motion support.
+- [Local profile](https://123-abc.pro/h/account/): set a nickname, turn Full Access on or off, or reset progress; everything stays in this browser.
