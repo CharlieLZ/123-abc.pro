@@ -4,7 +4,7 @@
 
 Everything runs in the browser on phones and desktop screens. The activities are in English; the home page shows its headings, highlights, parent guide, privacy notice, and independence notice in English and Simplified Chinese. Every letter has its own page, from https://123-abc.pro/h/abcs/letter-a/ through https://123-abc.pro/h/abcs/letter-z/.
 
-There is no account, checkout, or paid tier on the site. A nickname, an access preference, and activity progress are kept in this browser's local storage, and clearing the site's browser data removes them. Videos include captions and local transcripts, new activities respect the device reduced-motion setting, and the hosting provider may process basic security logs and privacy-focused traffic measurements.
+There is no account, checkout, or paid tier on the site. A nickname, an access preference, and activity progress are kept in this browser's local storage, and clearing the site's browser data removes them. Accessible videos include captions, the video pages link to local transcripts, new activities respect the device reduced-motion setting, and the hosting provider may process basic security logs and privacy-focused traffic measurements.
 
 Parents are encouraged to keep sessions short (about five to ten minutes), stay nearby, and keep the volume comfortable. The activities support practice; they do not diagnose learning needs and do not replace a teacher or qualified specialist.
 
@@ -24,11 +24,11 @@ Parents are encouraged to keep sessions short (about five to ten minutes), stay 
 - [Letter D](https://123-abc.pro/h/abcs/letter-d/): ducks, dolls, drums, and dinosaurs.
 - [Letter E](https://123-abc.pro/h/abcs/letter-e/): elevator, elephants, and eggs.
 - [Letter F](https://123-abc.pro/h/abcs/letter-f/): a fox, fingers, and floating fish.
-- [Letter G](https://123-abc.pro/h/abcs/letter-g/): a guitar-playing gorilla and colouring.
+- [Letter G](https://123-abc.pro/h/abcs/letter-g/): a guitar-playing gorilla and a gumball machine.
 - [Letter H](https://123-abc.pro/h/abcs/letter-h/): horns, helicopter, horse, and hummingbird.
 - [Letter I](https://123-abc.pro/h/abcs/letter-i/): igloo, iguana, and insect.
 - [Letter J](https://123-abc.pro/h/abcs/letter-j/): jet, jellybean, and jump.
-- [Letter K](https://123-abc.pro/h/abcs/letter-k/): a kitten, a kangaroo, and a key.
+- [Letter K](https://123-abc.pro/h/abcs/letter-k/): a kitten, a kangaroo, and a koala.
 - [Letter L](https://123-abc.pro/h/abcs/letter-l/): lightning, lips, and locks.
 - [Letter M](https://123-abc.pro/h/abcs/letter-m/): moon, mountain, masks, and motorcycle.
 - [Letter N](https://123-abc.pro/h/abcs/letter-n/): night, net, and nest.
