@@ -27,7 +27,7 @@ Every letter has its own activity page. Each page pairs the upper and lower case
 
 ## Videos, captions, and transcripts
 
-Video activities open in the page. The player offers play, pause, volume, captions, playback speed, and fullscreen. Accessible videos carry audio-aligned captions, and their transcript button opens a local text and visual-description page without leaving the site. No video is hosted on a third-party video platform, and no tracking parameters are added to the activity links.
+Video activities open in the page. The player offers play, pause, volume, and playback speed. Accessible videos add audio-aligned captions, and their transcript button opens a local text and visual-description page without leaving the site. No video is hosted on a third-party video platform, and no tracking parameters are added to the activity links.
 
 ## Accessibility
 
