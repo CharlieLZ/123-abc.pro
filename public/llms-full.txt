@@ -1,0 +1,72 @@
+# 123 ABC Pro
+
+> Bilingual English and Chinese practice site for the English alphabet and early phonics: 26 interactive letter activities, alphabet and vowel songs, colour activities, number songs, and a short guide for parents. No account or sign-in is required.
+
+123 ABC Pro is a practice site for young learners and the adults who guide them. It collects the alphabet and early phonics activities in one place: an alphabet board with all 26 letters, an activity rail of songs, colour activities, and number songs. The activities themselves are in English; the guidance around them is written in English and Simplified Chinese so a parent or teacher can read the instructions in either language.
+
+## How a session works
+
+1. Open the home page and pick a letter, or start with a familiar letter instead of following A to Z.
+2. Say the letter name and its sound together, then let the learner repeat before opening the next animation or song.
+3. Use the activity controls: begin with the play button, then select, match, drag, count, or paint as prompted. Use Next to continue and Play again to repeat.
+4. Come back to difficult sounds on another day instead of pushing through everything at once.
+
+The parent guide on the home page recommends short, calm sessions of roughly five to ten minutes, a comfortable volume, and an adult nearby. The activities support practice only: they do not diagnose learning needs and do not replace a teacher or qualified specialist.
+
+## Letter pages
+
+Every letter has its own activity page. Each page pairs the upper and lower case letter with words that begin with that letter, short animations or songs, and interactive tasks; the page descriptions name the words used, for example ant, apple, astronaut and alligator for the letter A, or fox in the box, insects with six legs and x-ray machines for the letter X. The letter pages are listed as links below and in [the llms.txt index](https://123-abc.pro/llms.txt).
+
+## Songs, colours, and numbers
+
+- **Alphabet song**: the interactive alphabet song.
+- **Sign language**: a hand sign for every letter of the alphabet.
+- **Vowel songs**: separate video activities for the short-a, short-e, short-i, short-o and short-u sounds.
+- **Colour games**: colour activities that include mixing paint to create new colours and painting a picture.
+- **Number songs**: counting and number songs such as Five Little Bears, Five Little Farmers, Ten Little Kittens, Three Crows, and Today Is Monday.
+
+## Videos, captions, and transcripts
+
+Video activities open in the page. The player offers play, pause, volume, captions, playback speed, and fullscreen. Accessible videos carry audio-aligned captions, and their transcript button opens a local text and visual-description page without leaving the site. No video is hosted on a third-party video platform, and no tracking parameters are added to the activity links.
+
+## Accessibility
+
+Keyboard users can move between controls with Tab, move between answer choices with the arrow keys, activate the focused control with Enter or Space, and close dialogs with Escape. A skip link at the top of the home page jumps straight to the activities. New activities respect the device reduced-motion preference, spoken prompts can be replayed, and captions and transcripts are available with the videos. On a small screen the home page suggests rotating the device for activities that need more room.
+
+## Privacy and local data
+
+You can use every activity without creating an account. A nickname, an access preference (Full Access), and activity progress are stored in this browser's local storage on this device only; they are not sent to the site. Clearing the site's browser data removes them. The hosting provider may process basic security logs and privacy-focused traffic measurements. Do not enter a child's full name, contact details, or other sensitive information into the player name field.
+
+## Independence
+
+123 ABC Pro is an independent learning project. It is not affiliated with, sponsored by, or endorsed by Starfall Education Foundation or other referenced brands. Certain learning resources are used with authorization; trademarks and brand names remain the property of their respective owners.
+
+## Frequently asked questions
+
+**Do I need an account or a payment?**
+No. There is no sign-in, no checkout, and no paid tier: every activity is open in the browser.
+
+**What does Full Access change?**
+Full Access is a local preference. You can turn it on from the colour games or number songs pages, or in the local profile, and the setting stays on this device.
+
+**Which languages does the site use?**
+The learning activities are in English. The home page headings, highlights, parent guide, privacy notice, and independence notice appear in English and Simplified Chinese.
+
+**Is progress saved between visits?**
+Progress, the nickname, and the access preference stay in this browser's local storage on the device that set them. Clearing the browser data resets them.
+
+**Do the activities replace a teacher or specialist?**
+No. They are practice material and are not a diagnostic tool.
+
+**Is 123 ABC Pro connected to Starfall?**
+No. It is an independent project that is not affiliated with, sponsored by, or endorsed by Starfall Education Foundation or other referenced brands.
+
+## Links
+
+- [Home](https://123-abc.pro/)
+- [Help](https://123-abc.pro/h/help/)
+- [Accessibility](https://123-abc.pro/h/accessibility/)
+- [Local profile](https://123-abc.pro/h/account/)
+- [Colour games](https://123-abc.pro/h/colors/)
+- [Number songs](https://123-abc.pro/h/mathsongs/)
+- [Sitemap](https://123-abc.pro/sitemap.xml)
