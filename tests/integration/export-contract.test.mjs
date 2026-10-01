@@ -49,6 +49,29 @@ test("exports the production GA4 and Plausible integrations", async () => {
   assert.match(html, /https:\/\/click[.]pageview[.]click\/js\/script[.]js/);
 });
 
+test("privacy copy discloses the analytics scripts the pages load", async () => {
+  const html = await readFile("out/index.html", "utf8");
+  const [llms, llmsFull] = await Promise.all([
+    readFile("out/llms.txt", "utf8"),
+    readFile("out/llms-full.txt", "utf8"),
+  ]);
+  const privacy = html.match(/<article id="privacy"[\s\S]*?<\/article>/)?.[0] ?? "";
+  const privacyText = visibleText(privacy);
+
+  assert.match(html, /googletagmanager[.]com\/gtag\/js/);
+  assert.match(privacyText, /Google Analytics/);
+  assert.match(privacyText, /cookies/i);
+  assert.match(privacyText, /Cookie/);
+  assert.match(privacyText, /页面访问统计/);
+  assert.doesNotMatch(privacyText, /privacy-focused traffic measurements/);
+  assert.doesNotMatch(privacyText, /注重隐私的访问统计/);
+
+  for (const [name, body] of [["llms.txt", llms], ["llms-full.txt", llmsFull]]) {
+    assert.match(body, /Google Analytics/, `${name} discloses Google Analytics`);
+    assert.doesNotMatch(body, /privacy-focused traffic measurements/, `${name} drops the stale claim`);
+  }
+});
+
 test("does not expose template identity in the production homepage", async () => {
   const html = await readFile("out/index.html", "utf8");
 
