@@ -58,9 +58,9 @@ export const parentGuidance = {
 
 export const privacyNotice = {
   english:
-    "You can use the learning activities without creating an account. A nickname, access preference, or activity progress may be saved in your browser's local storage and can be removed by clearing this site's browser data. The hosting provider may process basic security logs and privacy-focused traffic measurements. Do not enter a child's full name, contact details, or other sensitive information.",
+    "You can use the learning activities without creating an account. A nickname, access preference, or activity progress may be saved in your browser's local storage and can be removed by clearing this site's browser data. The hosting provider may process basic security logs. The home page also loads Google Analytics and a second page-view analytics script to measure visits; they may set cookies or similar identifiers and receive your IP address, device and page-view data. Do not enter a child's full name, contact details, or other sensitive information.",
   chinese:
-    "使用这些学习活动不需要创建账号。昵称、访问偏好或活动进度可能保存在浏览器本地存储中，清除本站浏览器数据即可删除。托管服务商可能处理基础安全日志和注重隐私的访问统计。请不要填写儿童全名、联系方式或其他敏感信息。",
+    "使用这些学习活动不需要创建账号。昵称、访问偏好或活动进度可能保存在浏览器本地存储中，清除本站浏览器数据即可删除。托管服务商可能处理基础安全日志。首页还会加载 Google Analytics 和另一个页面访问统计脚本来统计访问情况；它们可能设置 Cookie 或类似标识符，并接收您的 IP 地址、设备和页面访问数据。请不要填写儿童全名、联系方式或其他敏感信息。",
 } as const;
 
 export const independenceNotice = {

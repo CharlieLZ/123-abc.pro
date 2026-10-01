@@ -4,7 +4,7 @@
 
 Everything runs in the browser on phones and desktop screens. The activities are in English; the home page shows its headings, highlights, parent guide, privacy notice, and independence notice in English and Simplified Chinese. Every letter has its own page, from https://123-abc.pro/h/abcs/letter-a/ through https://123-abc.pro/h/abcs/letter-z/.
 
-There is no account, checkout, or paid tier on the site. A nickname, an access preference, and activity progress are kept in this browser's local storage, and clearing the site's browser data removes them. Accessible videos include captions, the video pages link to local transcripts, new activities respect the device reduced-motion setting, and the hosting provider may process basic security logs and privacy-focused traffic measurements.
+There is no account, checkout, or paid tier on the site. A nickname, an access preference, and activity progress are kept in this browser's local storage, and clearing the site's browser data removes them. Accessible videos include captions, the video pages link to local transcripts, new activities respect the device reduced-motion setting, the hosting provider may process basic security logs, and the home page loads Google Analytics and a second page-view analytics script.
 
 Parents are encouraged to keep sessions short (about five to ten minutes), stay nearby, and keep the volume comfortable. The activities support practice; they do not diagnose learning needs and do not replace a teacher or qualified specialist.
 
