@@ -35,7 +35,7 @@ Keyboard users can move between controls with Tab, move between answer choices w
 
 ## Privacy and local data
 
-You can use every activity without creating an account. A nickname, an access preference (Full Access), and activity progress are stored in this browser's local storage on this device only; they are not sent to the site. Clearing the site's browser data removes them. The hosting provider may process basic security logs and privacy-focused traffic measurements. Do not enter a child's full name, contact details, or other sensitive information into the player name field.
+You can use every activity without creating an account. A nickname, an access preference (Full Access), and activity progress are stored in this browser's local storage on this device only; they are not sent to the site. Clearing the site's browser data removes them. The hosting provider may process basic security logs. The home page also loads Google Analytics and a second page-view analytics script to measure visits; they may set cookies or similar identifiers and receive your IP address, device and page-view data. Do not enter a child's full name, contact details, or other sensitive information into the player name field.
 
 ## Independence
 
